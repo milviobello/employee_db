@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My UI To GET Employees Using AWS Lambda API</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.410.0.min.js"></script>
+	<script src="./mysql-get-employees.js"></script>
+</head>
+<body>
+	<h2>View And Filter Employees</h2>
+	<p></p>
+	Employee ID : <input id="empId" type="text" value="" />
+	<br>
+	Supervisor ID : <input id="supId" type="text" value="" />
+	<br>
+	Employee First Name : <input id="empFirstName" type="text" value="" />
+	<br>
+	Employee Last Name :  <input id="empLastName" type="text" value="" />
+	<br>
+	Employee Title :  <input id="empTitle" type="text" value="" />
+	<br />
+	<button onclick="getEmployeesUsingLambda();">View Employees</button>
+	<button onclick="clearResults();">Clear</button>
+	<script>
+		initUi();
+	</script>
+	<br />
+	<div id="responseArea">
+
+	</div>
+</body>
+</html>
